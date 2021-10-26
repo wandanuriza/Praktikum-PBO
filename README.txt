@@ -1,1 +1,1 @@
-Saya membuat Repository baru untuk menyimpan semua tugas kodingan
+Saya membuat Repository baru untuk menyimpan semua tugas codingan
