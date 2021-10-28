@@ -1,6 +1,6 @@
-package circle.cylinder;
+package Cylinder;
 
-public class Cylinder extends Circle { // Save as "Cylinder.java"
+public class Cylinder extends Circle { 
 private double height; // private variable
 
 	// Constructor with default color, radius and height
@@ -26,11 +26,22 @@ private double height; // private variable
 		return height;
 	}
 	
+	@Override
+    public double getArea(){
+        return (2 * Math.PI * super.getRadius() * height) + (2 * super.getArea());
+    }
+	
 	// A public method for computing the volume of cylinder
 	// use superclass method getArea() to get the base area
-	public double getVolume() {
-		return getArea()*height;
+    // Mengubah nilai value dari getVolume()
+    public double getVolume() {
+    	return super.getArea()*height; 
 	}
+    
+    @Override
+    public String toString(){
+        return "Cylinder: subclass of " + super.toString() + "height=" + height;
+    }
 }
 
 

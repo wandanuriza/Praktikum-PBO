@@ -1,4 +1,4 @@
-package circle.cylinder;
+package Cylinder;
 
 public class TestCylinder { 
 	public static void main (String[] args) {
@@ -28,6 +28,12 @@ public class TestCylinder {
 			+ " height=" + c3.getHeight()
 			+ " base area=" + c3.getArea()
 			+ " volume=" + c3.getVolume());
+		
+		// Memanggil toString()
+		System.out.println("\n");
+		System.out.println(c1.toString());
+	    System.out.println(c2.toString());
+	    System.out.println(c3.toString());
 	}
 }
 
