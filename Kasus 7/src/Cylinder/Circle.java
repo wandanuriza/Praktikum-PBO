@@ -7,8 +7,8 @@ import Shape.Shape;
 */
 public class Circle { 
 	// private instance variable, not accessible from outside this class
-	private double radius;
-	private String color;
+	private double radius; //jari-jari
+	private String color; //warna
 
 	// Constructors (overloaded) 
 	/** Constructs a Circle instance with default value for radius and color  */  
@@ -41,7 +41,9 @@ public class Circle {
 
 	/** Returns the area of this Circle instance */
 	public double getArea() {
-		return radius*radius*Math.PI;
+		return radius*radius*Math.PI;  
+		//rumus luas lingkaran phi x r kuadrat 
+		//Math.PI adalah static final double constant di Java
 	}
 	
     /** Menambahkan Setter untuk radius */

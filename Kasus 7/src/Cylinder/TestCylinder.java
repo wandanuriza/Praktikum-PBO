@@ -21,7 +21,7 @@ public class TestCylinder {
 			+ " volume=" + c2.getVolume());
 
 		// Declare and allocate a new instance of cylinder -- deklarasi objek baru (c3) dari Cylinder
-		// specifying radius and height, with default color --menggunakan color default tapi radius,height di set manual
+		// specifying radius and height, with default color --menggunakan radius,tinggi yang spesifik, dan color default
 		Cylinder c3 = new Cylinder(2.0, 10.0);
 		System.out.println("Cylinder:"
 			+ " radius=" + c3.getRadius()

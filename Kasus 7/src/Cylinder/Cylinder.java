@@ -28,7 +28,7 @@ private double height; // private variable
 	
 	@Override
     public double getArea(){
-        return (2 * Math.PI * super.getRadius() * height) + (2 * super.getArea());
+        return (2 * Math.PI * super.getRadius() * height) + (2 * super.getArea());  // dinding tabung + 2 alas tabung
     }
 	
 	// A public method for computing the volume of cylinder
