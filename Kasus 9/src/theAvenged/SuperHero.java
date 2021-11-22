@@ -1,26 +1,31 @@
 package theAvenged;
+import java.util.*; //import all packages
 
-public abstract class SuperHero {
-	private int powerLevel;
-	private String name;
-	protected Power[] powerList;
+public abstract class SuperHero implements Comparable<SuperHero> {    
+	// abstract class implements Comparable Interface so we can use the sort method
 	
-	abstract void identity(); //abstract method
+	protected int powerLevel;   //protected in order to subclass have access
+	protected String name;
+	protected java.util.List<Power> powerList;
+	
+	public SuperHero(int powerLevel, String name) {
+		this.powerLevel = powerLevel;
+		this.name = name;
+		this.powerList = new ArrayList<Power>();
+	}
+	
+	public abstract void identity(); 
+	
+	public int compareTo(SuperHero superHero) {
+		return this.powerLevel - superHero.getPowerLevel(); //compare list
+	}
 	
 	public int getPowerLevel() {
 		return powerLevel;
 	}
 	
-	public void setPowerLevel(int powerLevel) {
-		this.powerLevel = powerLevel;
-	}
-	
 	public String getName() {
 		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
 	}
 	
 	public void addPower (Power power) {
@@ -28,7 +33,10 @@ public abstract class SuperHero {
 	}
 	
 	public void showPowers() {
-		System.out.println("\nIt's" + name);
+		System.out.println("TIME TO SHOW YOU MY POWERS");
+	    for (Power powerlist : powerList) { 
+	    	powerlist.doPower(); 
+	    }
 	}
 		
 }
